@@ -26,26 +26,26 @@ export default {
   },
 
   mounted() {
-    // //绑定事件，其他界面可能要写在methods里
-    // let btn = document.querySelector('.login-border');
-    // btn.addEventListener('keydown', this.keyDown);
+    //绑定事件，其他界面可能要写在methods里
+    let btn = document.querySelector('.login-border');
+    btn.addEventListener('keydown', this.keyDown);
   },
 
   methods: {
     Logins() {
-      // Admin_Login(this.username, this.password).then(res =>{
-      //   console.log(res.data)
-      //   this.login_data = res.data
-      //   this.isLogin()
-      // })
+      Admin_Login(this.username, this.password).then(res =>{
+        console.log(res.data)
+        this.login_data = res.data
+        this.isLogin()
+      })
       this.isLogin()
     },
     isLogin() {
-      // if(this.login_data[0].username === this.username && this.login_data[0].password === this.password){
-      //   this.$store.commit("isPath")
-      //   this.$store.commit("setLoginInfo", this.login_data)
-      //   this.$router.push('/admin')
-      // }
+      if(this.login_data[0].username === this.username && this.login_data[0].password === this.password){
+        this.$store.commit("isPath")
+        this.$store.commit("setLoginInfo", this.login_data)
+        this.$router.push('/admin')
+      }
 
       if(this.username === 'yefeng' && this.password === 'yefeng'){
         this.$store.commit("isPath")
