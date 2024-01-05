@@ -1,7 +1,7 @@
 <template>
   <div class="input_box">
     <input type="text" class="input" placeholder="请输入内容" v-model="input">
-    <i class="el-icon-search ioc" @click="Search()"></i>
+    <i class="el-icon-search ioc" @click="Search"></i>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     Search() {
-      console.log(this.input)
+      // 暂定你输入的内容
       this.input = ''
     }
   },
