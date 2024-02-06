@@ -7,11 +7,11 @@ export function titleChange() {
   useEventListener(document, "visibilitychange", () => {
     if (document.hidden) {
       //离开当前页面时标签显示内容
-      document.title = "w(ﾟДﾟ)w 不要走！再看看嘛！";
+      document.title = "w(ﾟДﾟ)w 爱我别走！";
       clearTimeout(titleTime);
     } else {
       //返回当前页面时标签显示内容
-      document.title = "♪(^∇^*)欢迎回来！";
+      document.title = "♪(^∇^*)你终于回来啦！";
       //两秒后变回正常标题
       titleTime = setTimeout(() => {
         document.title = OriginTitile;
